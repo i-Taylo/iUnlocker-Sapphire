@@ -27,3 +27,9 @@ This project is controllable by the dev only.
     <img src="https://img.shields.io/badge/🥈C++-white.svg?longCache=true&style=flat-triangle"
       alt="_time_stamp_" />
 </div>
+***
+
+# Notes:
+‘‘
+git clone 
+‘‘
