@@ -31,9 +31,17 @@ This project is controllable by the dev only.
 ***
 
 # Notes:
+* This project is 100% Free :).
 * Everything is hidden from the normal user, (Everything works behind the scenes).
 * Anything suspicious the module automatically disable itself.
 * Advanced, Well developed protection codes to protect this project.
 * All *.sh files are compiled with SHC.
 * Advanced anti-bootloop code.
 
+***
+
+# Attention
+> Project works on A11 & A12 Only!
+> Snapdragon Devices Only!
+
+***
