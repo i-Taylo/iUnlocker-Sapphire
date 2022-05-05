@@ -39,7 +39,15 @@ This project is controllable by the dev only.
 * Advanced anti-bootloop code.
 
 ***
+# Requirements:
+* 64bit Device | 32bit not supported now but it'll be soon.
+* Android 11 Or Android 12.
+* Snapdragon Processor.
+* RW System . (read more)
+* Magisk 24.3 not required but for OTA Updates.
+* Termux | not required but for the unlocker & the cleaner.
 
+***
 # Attention
 > Project works on A11 & A12 Only!
 > Snapdragon Devices Only!
