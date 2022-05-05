@@ -45,4 +45,11 @@ This project is controllable by the dev only.
 > Snapdragon Devices Only!
 
 ***
+# Features:
 
+* - This will unlock Highest graphics in all games. (Apex legends, pubg, codm, etc...)
+* - lib unpacker, its will automatically unpack required libs and modify it for your phone.
+* - Bootloop saver addon (Only for iUnlocker). e.g: if the phone stuck on bootlogo forever you can disable the module by holding power button then unleash it after the screen gose off.
+* - Unlocker. adreno 660 unlocks all the graphics but this unlocker will unlock 120/90/60 fps .
+* - graphics driver for better quality while uploading videos or photos on social media apps. This can improve picture quality in games too.
+* - Shader renderer driver.
