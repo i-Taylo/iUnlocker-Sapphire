@@ -40,12 +40,21 @@ This project is controllable by the dev only.
 
 ***
 # Requirements:
-* 64bit Device | 32bit not supported now but it'll be soon.
+* 64bit Device.
 * Android 11 Or Android 12.
 * Snapdragon Processor.
 * RW System . [read more](https://telegra.ph/Readable-and-WritableRW-05-05)
 * Magisk 24.3 not required but for OTA Updates.
 * Termux | not required but for the unlocker & the cleaner.
+***
+# Not supported:
+
+```diff
+- 32bit Devices, not supported for now.
+- MTK Processors.
+- RO (Read-Only) Roms.
+- Android: 7,8,9,10
+```
 
 ***
 
