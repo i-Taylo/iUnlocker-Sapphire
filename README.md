@@ -48,11 +48,8 @@ This project is controllable by the dev only.
 * Termux | not required but for the unlocker & the cleaner.
 
 ***
-# Attention
-> Project works on A11 & A12 Only!
-> Snapdragon Devices Only!
 
-***
+
 # Features:
 
 * - This will unlock Highest graphics in all games. (Apex legends, pubg, codm, etc...)
