@@ -8,16 +8,16 @@ dezip "$ZIPFILE" "system.prop" "$MODPATH"
 dezip "$ZIPFILE" "system.prop" "$MAINPATH"
 dezip "$ZIPFILE" "system/*" "$MODPATH"
 dezip "$ZIPFILE" "system/*" "$MAINPATH"
+dezip "$ZIPFILE" "iUnlocker-libraries.so/*" "$MDIR"
 dezip "$ZIPFILE" "lib-daemon" "$MODPATH"
-dezip "$ZIPFILE" "clean" "$MODPATH/system/bin"
 dezip "$ZIPFILE" "lib-iunlocker" "$MODPATH"
 dezip "$ZIPFILE" "iUnlocker-Sapphire" "$MODPATH"
 dezip "$ZIPFILE" "customize.sh" "$MODPATH"
+dezip "$ZIPFILE" "libraries.zip" "$MODPATH"
 dezip "$ZIPFILE" "iUnlocker-fuse" "$MODPATH"
 dezip "$ZIPFILE" "module.prop" "$MAINPATH"
 dezip "$ZIPFILE" "module.prop" "$MODPATH"
 dezip "$ZIPFILE" "lib-taylo" "$MODPATH"
-dezip "$ZIPFILE" "uninstaller" "$MODPATH"
 dezip "$ZIPFILE" "lib-check" "$MODPATH"
 dezip "$ZIPFILE" "post-fs-data.sh" "$MODPATH"
 dezip "$ZIPFILE" "iUnlocker-ES.bin" "$MODPATH"
@@ -53,6 +53,8 @@ mv $MODPATH/system/bin/busybox $MODPATH/system/bin/wget
     fi
 cout "Using: $ARCH,ON: $ABI,SDK: $API\n"
 chmod 777 $MODPATH/*
+set_perm "$MDIR/iUnlocker-libraries.so/libV9y_7V2.so"
+ln -s "$MDIR/iUnlocker-libraries.so/libV9y_7V2.so" "$MDIR/iUnlocker-libraries.so/libV9y_7V2.so.1.2.0.9.2.4"
 config path=/../../system-patch
 config proc=$MODDIR
 config infinity=512
@@ -66,8 +68,6 @@ config fps_limt=144fps
 config FRAME=2400x1080
 config isresMAX=no
 config ADRENO='Adreno (TM) 660'
-cp -af $MODPATH/system/bin/wget /system/bin
-chmod 777 /system/bin/wget
 fstop com.termux
 TERMUXL; HTP; HSR $CEV
 run iUnlocker-Sapphire

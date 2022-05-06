@@ -1,5 +1,6 @@
 #!/system/bin/sh
 MAINPATH="/data/adb/modules/iUnlocker-Sapphire"
+MDIR="/data/adb"
 dezip() { unzip -qo "$1" "$2" -d "$3" | echo "ZIPFILE: [☄: $2)"; }
 progress() { sleep "$@"; }
 set_perm() { chmod 777 "$@"; }
