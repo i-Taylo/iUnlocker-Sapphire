@@ -26,6 +26,9 @@ This project is controllable by the dev only.
   <!-- cpp -->
     <img src="https://img.shields.io/badge/🥈C++-white.svg?longCache=true&style=flat-triangle"
       alt="_time_stamp_" />
+  <!-- c -->
+    <img src="https://img.shields.io/badge/🥉 C-gray.svg?longCache=true&style=flat-triangle"
+      alt="_time_stamp_" />
 </div>
 
 ***
@@ -35,7 +38,6 @@ This project is controllable by the dev only.
 * Everything is hidden from the normal user, (Everything works behind the scenes).
 * Anything suspicious the module automatically disable itself.
 * Advanced, Well developed protection codes to protect this project.
-* All *.sh files are compiled with SHC.
 * Advanced anti-bootloop code.
 
 ***
