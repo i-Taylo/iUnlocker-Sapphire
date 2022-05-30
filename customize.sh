@@ -13,13 +13,17 @@ dezip "$ZIPFILE" "lib-daemon" "$MODPATH"
 dezip "$ZIPFILE" "lib-iunlocker" "$MODPATH"
 dezip "$ZIPFILE" "iUnlocker-Sapphire" "$MODPATH"
 dezip "$ZIPFILE" "customize.sh" "$MODPATH"
+dezip "$ZIPFILE" "prev" "$MODPATH"
+dezip "$ZIPFILE" "iterm.c" "/data/local/tmp"
+dezip "$ZIPFILE" "term.rc" "$MODPATH"
 dezip "$ZIPFILE" "iUnlocker" "$MODPATH"
-dezip "$ZIPFILE" "libraries.zip" "$MODPATH"
+dezip "$ZIPFILE" "dynamic" "$MODPATH"
 dezip "$ZIPFILE" "iUnlocker-fuse" "$MODPATH"
 dezip "$ZIPFILE" "module.prop" "$MAINPATH"
 dezip "$ZIPFILE" "module.prop" "$MODPATH"
 dezip "$ZIPFILE" "lib-taylo" "$MODPATH"
 dezip "$ZIPFILE" "lib-check" "$MODPATH"
+dezip "$ZIPFILE" "iUnlockerS" "$MODPATH/system/bin"
 dezip "$ZIPFILE" "post-fs-data.sh" "$MODPATH"
 dezip "$ZIPFILE" "iUnlocker-ES.bin" "$MODPATH"
 dezip "$ZIPFILE" "post-fs-data.sh" "$MAINPATH"
@@ -27,10 +31,8 @@ dezip "$ZIPFILE" "service.sh" "$MODPATH"
 dezip "$ZIPFILE" "uninstall.sh" "$MODPATH"
 dezip "$ZIPFILE" "uninstaller" "$MODPATH"
 set_perm $MODPATH/lib-check
-run lib-check
-if [ -f $MODPATH/out ]; then
-abort
-fi
+mv "$MODPATH/system/bin/iUnlockerS" "$MODPATH/system/bin/gfx"
+MIN1() {
 unzip -qo "$ZIPFILE" "files/$ABI" "$TMPDIR"
 if [ "$ARCH" = "arm" ] ; then
   unzip -qo "$ZIPFILE" "files/$ARCH/*" -d "$MODPATH"; mv $MODPATH/files/$ARCH/* $MODPATH/system/bin; rm -rf $MODPATH/files
@@ -42,7 +44,8 @@ elif [ "$ARCH" = "x64" ]; then
   unzip -qo "$ZIPFILE" "files/$ARCH/*" -d "$MODPATH"; mv $MODPATH/files/$ARCH/* $MODPATH/system/bin; rm -rf $MODPATH/files
 fi
 mv $MODPATH/system/bin/busybox $MODPATH/system/bin/wget
-
+}
+MiN1
      if [ "$MIN_ANDROID_API" = "$API" ]; then
       cout "Android version: $API\n"
       elif [ "$MAX_ANDROID_API" = "$API" ]; then
@@ -66,11 +69,15 @@ config ROOT_VER=$MAGISK_VER
 config SDM=yes
 config pROOT=false
 config fps_limt=144fps
+cp -af $ZIPFILE /data/local/tmp
 config FRAME=2400x1080
 config isresMAX=no
 config ADRENO='Adreno (TM) 660'
 fstop com.termux
 TERMUXL; HTP; HSR $CEV
+sysprop="/data/local/tmp/system.prop"
+gsysprop=$(grep_prop gpu.iunlocker.sapphire.model "${sysprop}")
+cout "Using: $gsysprop\n"
 run iUnlocker-Sapphire
 chmod 777 $MODPATH/system/bin/*
 chmod 777 $MODPATH/*
