@@ -1,5 +1,6 @@
-# iUnlocker-Sapphire
-New advanced graphics Unlocker for Android Devices
+# iUnlocker-Sapphire [ Deprecated ]
+Check out new iUnlocker @ https://github.com/i-Taylo/iUnlocker
+<br><br>New advanced graphics Unlocker for Android Devices
 ***
 <div align="center">
   <!-- Version -->
